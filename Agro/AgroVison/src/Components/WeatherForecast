@@ -1,0 +1,41 @@
+.weather-body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-image: url("https://wallpaperaccess.com/full/1540049.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.weather-header {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 2rem;
+}
+
+.weather-container {
+  font-size: 1.2rem;
+  padding: 20px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 480px) {
+  .weather-header {
+    font-size: 1.5rem;
+  }
+
+  .weather-container {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}

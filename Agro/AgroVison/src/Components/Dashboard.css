@@ -1,0 +1,91 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://wallpaperaccess.com/full/1598244.jpg"); 
+  background-size: cover;          
+  background-position: center;     
+  background-repeat: no-repeat;    
+  background-attachment: fixed;
+  color: #fff;                    
+}
+
+
+
+
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262526;
+  color: white;
+  padding: 10px 20px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main.container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn.green {
+  background-color: #015785;
+}
+
+.btn.green:hover {
+  background-color: #121313dc;
+}
+
+.btn.blue {
+  background-color: #015785;
+}
+.btn.blue:hover {
+  background-color: #121313dc;
+}
+
+/* .btn.blue:hover {
+  background-color: #0056b3;
+} */
+
+footer {
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
+  padding: 0.1px 0.1px;
+  margin-top: 350px;
+  font-size: 1rem;
+}

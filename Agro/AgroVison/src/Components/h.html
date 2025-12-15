@@ -1,0 +1,255 @@
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgroVision - Agriculture Management</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://wallpaperaccess.com/full/1598244.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Header */
+header {
+  width: 99%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262526;
+  color: white;
+  padding: 10px 20px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+header nav a {
+  margin: 8px 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Container */
+main.container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.buttons {
+  /* width: 1050px; */
+  margin-top: 20px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  text-align: center;
+  min-width: 160px;
+}
+
+.btn.green {
+  background-color: #015785;
+}
+
+.btn.green:hover {
+  background-color: #121313dc;
+}
+
+.btn.blue {
+  background-color: #015785;
+}
+
+.btn.blue:hover {
+  background-color: #121313dc;
+}
+
+/* Weather Output */
+#weatherResult {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+    bottom: 0px;
+    position: absolute;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: 1rem;
+    /* margin-top: 515px; */
+
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  main.container {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  #weatherResult {
+    font-size: 1rem;
+  }
+}
+ homepage.css
+
+</style>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🌾 AgroVision</div>
+    <nav>
+      <a href="#">login as farmer</a>
+      <a href="register.html">login as vendor</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Empowering Farmers, Connecting Buyers</h1>
+    <p>
+      Get real-time weather updates, list your crops, and explore smart farming technologies.
+    </p>
+    <div class="buttons">
+      <a href="register.html" class="btn green">AI farming</a>
+      <a href="weathe.html" class="btn blue">Farmers venders chat</a>
+        <a href="weaher.html" class="btn blue">Markets trends</a>
+          <!-- <a href="#" class="btn blue" onclick="getWeather()">Weather</a> -->
+          <!-- Somewhere in your index.html -->
+<a href="weather.html" class="btn blue">Check Weather</a>
+
+          
+    
+          <section id="weatherResult" style="margin-top: 50px; color: rgb(14, 14, 14);"></section>
+    </div>
+  </main>
+  
+
+
+
+  <script>
+
+    function getWeather() {
+  const apiKey = "YOUR_API_KEY"; // 🔑 Replace with your real OpenWeatherMap API key
+  const output = document.getElementById("weatherResult");
+
+  // Clear any old data
+  output.innerHTML = "Detecting your location...";
+
+  // Get user's location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else {
+    output.innerHTML = "Geolocation is not supported by your browser.";
+  }
+
+  function success(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    fetch('https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric')
+      .then(res => res.json())
+      .then(data => {
+        const weather = data.weather[0].description;
+        const temp = data.main.temp;
+        const city = data.name;
+
+        output.innerHTML = `📍 <strong>${city}</strong><br>
+        🌡 Temperature: <strong>${temp}°C</strong><br>
+        🌥 Condition: <strong>${weather}</strong>`;
+      })
+      .catch(() => {
+        output.innerHTML = "Failed to fetch weather data.";
+      });
+  }
+
+  function error() {
+    output.innerHTML = "Unable to access your location.";
+  }
+}
+
+
+</script>
+
+
+
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AgroVision. All rights reserved.</p>
+    <p>Smart Agriculture | AI Farming | Crop Marketplace</p>
+    <P>
+        review for app
+    </P>
+  </footer>
+
+
+
+  
+</body> -->

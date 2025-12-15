@@ -1,0 +1,75 @@
+.cart-container {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1606761568499-4a4c1e00a2cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  backdrop-filter: blur(4px);
+  background-color: rgba(247, 253, 249, 0.8); /* fallback in case image fails */
+}
+
+.cart-title {
+  color: #2e8b57;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cart-empty {
+  font-size: 18px;
+  color: #555;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.cart-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #d0e0d8;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 128, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+}
+
+.cart-card h4 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #2e8b57;
+}
+
+.cart-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.cart-total {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+@media (max-width: 600px) {
+  .cart-container {
+    padding: 15px;
+  }
+
+  .cart-title {
+    font-size: 24px;
+  }
+
+  .cart-card {
+    padding: 15px;
+  }
+}

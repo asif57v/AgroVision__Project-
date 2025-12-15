@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("https://wallpapercave.com/wp/wp9684737.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.ai-methods {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  justify-content: center;
+}
+
+
+@media (max-width:800px){
+.ai-methods {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  justify-content: center;
+  width: 800px;
+  font-size: 25px;
+}
+}
+
+@media (max-width: 390px) {
+    .ai-section {
+        font-size: 1rem;
+        padding: 15px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex
+;
+        left: 246px;
+        width: 105%;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .ai-section {
+        font-size: 1rem;
+        padding: 15px;
+        position: relative;
+        width: 87%;
+        left: 162px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .ai-section {
+        font-size: 1rem;
+        padding: 15px;
+        position: relative;
+        width: 97px;
+        left: 192px;
+    }
+}
+
+
+
+.method-list {
+      width: 783px;
+    display: grid
+;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.method-card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.method-card:hover {
+  /* background: rgba(255, 255, 255, 0.1); */
+  transform: scale(1.03);
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #0b6eab;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #0b4e8b;
+}
+
+/* AI Section */
+.ai-section {
+  width: 90%;
+  max-width: 700px;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Responsive Font for AI Section */
+@media (max-width: 768px) {
+  .ai-section {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-section {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0b6eab;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 30px;
+  background-color: #ffffff20;
+  padding: 20px;
+  border-radius: 8px;
+}

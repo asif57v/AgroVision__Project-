@@ -1,0 +1,90 @@
+/* General page styling */
+.farmer-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7fdf9;
+}
+
+/* Form Styling */
+.farmer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.farmer-form input {
+  padding: 10px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.farmer-form button {
+  padding: 10px 18px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.farmer-form button:hover {
+  background-color: #218838;
+}
+
+/* Crop cards container */
+.crop-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+/* Single crop card */
+.crop-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 221px;
+  height: 248px;
+  padding: 15px;
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.crop-card h4 {
+  color: #1e7e34;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.crop-card p {
+  margin: 5px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.crop-card button {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.crop-card button:hover {
+  background-color: #b02a37;
+}

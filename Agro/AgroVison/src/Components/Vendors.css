@@ -1,0 +1,69 @@
+/* Vendors.css */
+.vendors-container {
+  padding: 40px 20px;
+  background-color: #f0f8ff;
+  min-height: 100vh;
+}
+
+@media (max-Width:811px){
+  .vendors-container {
+          padding: 40px 20px;
+        background-color: #f0f8ff;
+        min-height: 259vh;
+        font-size: 33px;
+        width: 124vh;
+}
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.crops-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.crop-card {
+  width: 200px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+  border: 1px solid #e1e1e1;
+}
+
+.crop-card:hover {
+  transform: scale(1.03);
+}
+
+.crop-card h3 {
+  margin: 0 0 10px;
+  color: #007f5f;
+}
+
+.crop-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #246d47;
+}
